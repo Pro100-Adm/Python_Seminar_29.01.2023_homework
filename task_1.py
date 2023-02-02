@@ -1,8 +1,12 @@
 def get_results(a,b):
-    yield a
+    print(f"Result: ")
+    i = 1
+    print(f"Day {str(i)}: {str(a)}")
     while a<b:
         a *= 1.1
-        yield a
+        i += 1
+        print(f"Day {str(i)}: {str(a)}")
+    print(f"At {str(i)}-th day sportsman achieved result - at least {str(round(a))} km.")
 
 def get_input_from_user(message):
     user_input = input(message)
@@ -15,9 +19,5 @@ def get_input_from_user(message):
 a = get_input_from_user("Enter a:")
 b = get_input_from_user("Enter b:")
 
-print(f"Результат: ")
-i = 1
-for num in get_results(a,b):
-    print(f"Day {str(i)}: {str(num)}")
-    i += 1
-print(f"At {str(i-1)}-th day sportsman achieved result - at least {str(num)} km.")
+get_results(a,b)
+
