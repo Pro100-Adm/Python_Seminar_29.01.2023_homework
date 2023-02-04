@@ -20,4 +20,3 @@ a = get_input_from_user("Enter a:")
 b = get_input_from_user("Enter b:")
 
 get_results(a,b)
-
